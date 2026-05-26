@@ -1,6 +1,6 @@
 import java.util.*;
 
-class program50
+class program69
 {
     
     public static void main(String A[])
@@ -15,45 +15,41 @@ class program50
 
         NumberX nobj = new NumberX();
 
-        bRet = nobj.CheckPerfect(iValue);
+        bRet = nobj.CheckPrime(iValue);
 
         if(bRet == true)
         {
-            System.out.println("It is Perfect");
+            System.out.println("It is Prime");
         }
 
         else
         {
-            System.out.println("It is not perfect");
+            System.out.println("It is not Prime");
         }
     }
 }
 
 class NumberX
 {
-    public boolean CheckPerfect(int iNo)
+    public boolean CheckPrime(int iNo)
     {
         int iCnt = 0;
-        int iSum = 0;
+        boolean bFlag = false;
 
-        for(iCnt = 1 ; iCnt <= (iNo / 2) ; iCnt++)
+        for(bFlag = true , iCnt = 2 ; iCnt <= (iNo / 2) ; iCnt++)
         {
             if((iNo % iCnt) == 0)
             {
-                iSum = iSum + iCnt;
+                bFlag = false;
+                break;
                 
             }
+            
+        return bFlag;
+
         }
 
-        if(iSum == iNo)
-        {
-            return true;
-        }
-
-        else
-        {
-            return false;
-        }
+        return true;
     }
 }
 

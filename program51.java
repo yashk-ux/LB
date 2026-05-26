@@ -1,6 +1,6 @@
 import java.util.*;
 
-class program50
+class program51
 {
     
     public static void main(String A[])
@@ -42,6 +42,10 @@ class NumberX
             {
                 iSum = iSum + iCnt;
                 
+            }
+            if(iSum > iNo)
+            {
+                break;
             }
         }
 
